@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f { text-align: center;
+            width: 500px;
+            height: 100px;
+            background-color:rgb(8, 0, 255) ;
+        }
+      
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th class="f" id="1" >b1</th> <th class="f" id="2">b2</th> <th class="f" id="3">b3</th>
+        </tr>
+        <tr>
+            <td class="f" id="4">b4</td> <td class="f" id="5">b5</td> <td class="f" id="6">b6</td>
+        </tr>
+        <tr>
+            <td class="f" id="7">b7</td> <td class="f" id="8">b8</td> <td class="f" id="9">b9</td>
+        </tr>
+        <tr>
+            <td class="f" id="10">b10</td> <td class="f" id="11">b11</td> <td class="f" id="12">b12</td>
+        </tr>
+    </table>
+    <script>
+            let count=0;
+          for(let i=1;i<13;i++){
+            
+            let h = document.getElementById(`${i}`);
+            h.onclick = function(e)
+            { count++
+                h.style.backgroundColor = 'green';
+                if(count==8){
+                    alert("congrats you win")
+                }
+            }
+          }
+
+
+             for(let i=0;i<4;i++){
+                let b0 = Math.floor(Math.random() * 12);
+                console.log(b0);
+                let v = document.getElementById(`${b0}`);
+                v.onclick=function(r){
+                v.style.backgroundColor="red";
+                let lost =  setInterval(function(){  alert("you lost")
+                 clearInterval(lost) } , 1000);
+                     }
+
+
+
+             }
+            
+             
+          
+           
+
+        
+       
+    </script>
+    
+</body>
+</html>
